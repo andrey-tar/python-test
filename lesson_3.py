@@ -1,22 +1,30 @@
-#task 1.1
-password = 'password123'
+# Напишіть програму, яка встановлює початковий пароль
+# і перевіряє, чи введений користувачем пароль співпадає
+# з ним. Якщо пароль дорівнює "password123", виведіть повідомлення
+# "Ви увійшли в систему". В іншому випадку
+# виведіть повідомлення "Неправильний пароль".
 
-if password == "password123":
+password = 'password123'
+input_field = input("Enter password:")
+if input_field == password:
     print('You entered the system')
 else: print('Wrong password')
 print()
 
-#task 1.2
-week_list = ["monday", 'tuesday', 'wednesday', 'thursday','friday','saturday','sunday']
-day_num = 1
+# Створіть програму, яка встановлює номер дня тижня і виводить назву
+# відповідного дня тижня. Якщо номер дня недійсний (менше 1
+# або більше 7), виведіть повідомлення про помилку.
 
-if day_num <1 or day_num >7:
+week_list = ["monday", 'tuesday', 'wednesday', 'thursday','friday','saturday','sunday']
+input_day = int(input("Choose day number (1-7):"))
+
+if input_day <1 or input_day >7:
     print("there's something wrong")
-else: print(week_list[day_num], "is a day of the week #", day_num)
+else: print(week_list[input_day], "is a day of the week #", input_day)
 print()
 
-#task 2.1
-num = 6
+# Виведіть таблицю множення для заданого числа від 1 до 10.
+num = int(input("Multiplication table for number:"))
 multip = 1
 
 while multip <= 10:
@@ -24,7 +32,8 @@ while multip <= 10:
     multip +=1
 print()
 
-#test 2.2
+# Визначте список чисел і обчисліть їх суму.
+
 sum_list = [12,15,13,19]
 summ = 0
 
@@ -33,8 +42,9 @@ for num in sum_list:
 print (summ)
 print()
 
-#test 2.3
-target = 9
+# Обчисліть факторіал заданого числа.
+
+target = int(input("Factorial for number:"))
 num = 1
 factor = 1
 while num <= target:
@@ -43,23 +53,30 @@ while num <= target:
 print (f"factorial of {target} is", factor)
 print()
 
-#test 2.4
+#Виведіть всі парні числа від 1 до 50.
+
 start = 1
 end = 50
+lst = []
 
 while start <= end:
     check_1 = start / 2
     check_2 = start // 2
     float(check_2)
     if check_1 == check_2:
-        print(start)
+        lst.append(start)
         start +=1
     else: start +=1
+print(lst)
 print()
 
-#test 2.5
-start_2 = 6
-end_2 = 2000
+# Знайдіть всі прості числа в заданому діапазоні.
+
+start_2 = int(input("Range start for simple numbers:"))
+end_2 = int(input("Range end for simple numbers:"))
+while start_2 >= end_2:
+    end_2 = int(input(f"Number should be bigger than {start_2}:"))
+
 lst = []
 
 for i in range(start_2,end_2+1):
