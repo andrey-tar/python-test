@@ -12,11 +12,11 @@ import math
 
 class Shape(ABC):
 
-    @classmethod
+    @abstractmethod
     def get_area(self):
         pass
 
-    @classmethod
+    @abstractmethod
     def get_perimeter(self):
         pass
 

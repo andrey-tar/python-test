@@ -55,7 +55,7 @@ print("")
 
 class Shape(ABC):
 
-    @classmethod
+    @abstractmethod
     def calculate_area(self):
         pass
 
